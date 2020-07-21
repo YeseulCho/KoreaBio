@@ -15,7 +15,7 @@ try :
     print(10 / num)
 
 except ZeroDivisionError :
-    print("Zero don't divide it")
+    print("Zero can't divide it")
 """
 """
 # Version 2
@@ -35,7 +35,7 @@ try :
     print(10 / num)
 
 except ZeroDivisionError :
-    print("Zero don't divide it")
+    print("Zero can't divide it")
     sys.exit()
 """
 
@@ -54,7 +54,7 @@ except ValueError :
     sys.exit()
 
 except ZeroDivisionError :
-    print("Zero don't divide it")
+    print("Zero can't divide it")
     sys.exit()
 
 
@@ -64,5 +64,5 @@ python 019-2.py 2 로 입력하면 결과는
  # 5.0
 
 python 019-2.py 0 으로 입력하면 결과는
- # Zero don't divide it
+ # Zero can't divide it
 """
