@@ -12,4 +12,6 @@ TAG
 Seq1 = "ATGTTATAG"
 
 for i in range(0, len(Seq1), 3) :
-    print(Seq1[i:i+3])
+    print(Seq1[i:i+3]) # 슬라이싱 # triple codon 만든것
+
+    # 이후에 dictionary에 아미노산 지정
