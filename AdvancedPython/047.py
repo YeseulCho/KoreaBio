@@ -13,3 +13,7 @@ print(t.count_base())
 print()
 
 print(t.count)
+print()
+
+print(len(t))
+print()

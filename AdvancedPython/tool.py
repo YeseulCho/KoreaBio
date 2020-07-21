@@ -1,9 +1,12 @@
 #! /usr/bin/env python
 
+import sys
+
 class FASTA :
     def __init__(self, file_name : str) :
         self.file_name = file_name
         self.count = {}
+        self.length = 0
 
     def count_base(self) :
         with open(self.file_name, 'r') as handle :
@@ -16,6 +19,25 @@ class FASTA :
                         self.count[s] += 1
                     else :
                         self.count[s] = 1
+
+    def __len__(self) :
+        for k, v in self.count.items() :
+            self.length += v
+        return self.length
+
+if __name__ == "__main__" :
+    if len(sys.argv) != 2 :
+        print(f"#usage : python {sys.argv[0]} [fasta]")
+        sys.exit()
+    file_name = sys.argv[1]
+    t = FASTA(file_name) # 객체 생성
+    t.count_base() # count_base 실행/ 실행되면 count라는 dic 안에 누적이 될것
+    print(t.count)
+    print(len(t))
+
+"""
+python tool.py 059.fasta
+"""
 
 
 
