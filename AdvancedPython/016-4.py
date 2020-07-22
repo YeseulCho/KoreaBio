@@ -32,6 +32,7 @@ with gzip.open(f, 'rb') as handle : # rb : read binary
             else :
                 d[s] = 1
 
+# 결과 저장
 with open("result1.txt", 'w') as handle :
     handle.write(f"A : {d['A']}\n")
     handle.write(f"C : {d['C']}\n")
