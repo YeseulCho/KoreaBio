@@ -23,3 +23,7 @@ def mer(l_seq1, l_seq2, n) :
 
 n = int(sys.argv[1])
 print(mer(l_seq1, l_seq2, n))
+
+"""
+python p067.py 5 
+"""
