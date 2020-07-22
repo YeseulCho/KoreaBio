@@ -37,7 +37,7 @@ def comp2(seq : str) -> str :
     d_comp = {"A":"T", "T":"A", "C":"G", "G":"C"} # 상보적 dic 만들어주기
     comp = ""
     for s in seq :
-        comp += d_comp[s]
+        comp += d_comp[s] # dictionary의 key에대한 value값을 comp에 str으로 넣어주기
     return comp
 
 # 외부 파일에서 import 했을때 나타나지 않게 하고싶을때 밑에 if 구문 사용 
