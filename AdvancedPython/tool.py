@@ -45,6 +45,18 @@ class FASTQ :
                     qual = line.strip()
                 cnt += 1
 
+class BED :
+    def __init__(self, file_name) :
+        self.file_name = file_name
+        chr_num = 0
+
+    def count_chr_num(self) :
+        with open(self.file_name, 'r') as handle :
+            for lin in handle :
+                if line.startswith("#") :
+                    continue
+                    self.chr_num += 1
+
 
 if __name__ == "__main__" :
     if len(sys.argv) != 2 :
@@ -59,9 +71,14 @@ if __name__ == "__main__" :
 #    print(len(t))
 
 # FASTQ
-    t = FASTQ(file_name)
-    t.count_read_num()
-    print(t.read_num)
+#    t = FASTQ(file_name)
+#    t.count_read_num()
+#    print(t.read_num)
+
+# BED
+ t = BED(file_name)
+ t.count_chr_num()
+ print(t.chr_num)
 
 """
 python tool.py 059.fasta
